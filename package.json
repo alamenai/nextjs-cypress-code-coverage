@@ -1,0 +1,45 @@
+{
+  "name": "nextjs-cypress-code-coverage",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "predev": "node scripts/babel/backup.js",
+    "prebuild": "node scripts/babel/backup.js",
+    "precypress-run-component": "node scripts/babel/restore.js",
+    "precypress-open-component": "node scripts/babel/restore.js",
+    "precypress-run-e2e": "node scripts/babel/restore.js",
+    "precypress-open-e2e": "node scripts/babel/restore.js",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "cypress-open-component": "cypress open --component",
+    "cypress-open-e2e": "cypress open --e2e",
+    "cypress-run-component": "cypress run --component --headless"
+  },
+  "dependencies": {
+    "next": "14.0.4",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@cypress/code-coverage": "^3.12.13",
+    "@istanbuljs/nyc-config-typescript": "^1.0.2",
+    "@types/cypress__code-coverage": "^3.10.2",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.0.1",
+    "babel-plugin-istanbul": "^6.1.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "cypress": "^13.6.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.4",
+    "nyc": "^15.1.0",
+    "postcss": "^8",
+    "source-map-support": "^0.5.21",
+    "tailwindcss": "^3.3.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5"
+  }
+}

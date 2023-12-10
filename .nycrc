@@ -1,0 +1,15 @@
+{
+  "extends": "@istanbuljs/nyc-config-typescript",
+  "all": true,
+  "extension": [".ts", ".tsx", ".css"],
+  "exclude": [
+    "cypress/**",
+    "**/__fixtures__/**",
+    "**/__mocks__/**",
+    "**/__tests__/**",
+    "coverage/**"
+  ],
+  "reporter": ["text-summary", "json", "html"],
+  "instrumenter": "nyc",
+  "sourceMap": false
+}
